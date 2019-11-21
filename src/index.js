@@ -1,24 +1,40 @@
-const {Command, flags} = require('@oclif/command')
+const { Command, flags } = require('@oclif/command')
 
 class GithubFetcherCommand extends Command {
-  async run() {
-    const {flags} = this.parse(GithubFetcherCommand)
-    const name = flags.name || 'world'
-    this.log(`hello ${name} from ./src/index.js`)
-  }
+	static args = [{
+			name: 'username',
+			required: true,
+			description: "Github Username",
+			hidden: false,
+		},
+		{
+			name: 'sort',
+			required: true,
+			description: "Sorting option",
+			hidden: false,
+			default: 'asc',
+			options: ['asc', 'desc']
+		},
+	]
+	async run() {
+		const { args } = this.parse(GithubFetcherCommand)
+		const username = args.username
+		const sort = args.sort || 'asc'
+		this.log(`Searching ${username} github, sorting in ${sort} order`)
+	}
 }
 
-GithubFetcherCommand.description = `Describe the command here
-...
-Extra documentation goes here
-`
+GithubFetcherCommand.description = `Cli tool that fetches Github repositories by username and sorts them by stargazers`
 
 GithubFetcherCommand.flags = {
-  // add --version flag to show CLI version
-  version: flags.version({char: 'v'}),
-  // add --help flag to show CLI version
-  help: flags.help({char: 'h'}),
-  name: flags.string({char: 'n', description: 'name to print'}),
+	// add --version flag to show CLI version
+	version: flags.version({
+		char: 'v'
+	}),
+	// add --help flag to show CLI version
+	help: flags.help({
+		char: 'h'
+	}),
 }
 
 module.exports = GithubFetcherCommand

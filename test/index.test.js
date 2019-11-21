@@ -1,18 +1,15 @@
-const {expect, test} = require('@oclif/test')
+const
+  {
+    expect,
+    test,
+  } = require('@oclif/test')
 const cmd = require('..')
 
 describe('githubFetcher', () => {
   test
   .stdout()
-  .do(() => cmd.run([]))
-  .it('runs hello', ctx => {
-    expect(ctx.stdout).to.contain('hello world')
-  })
-
-  test
-  .stdout()
-  .do(() => cmd.run(['--name', 'jeff']))
-  .it('runs hello --name jeff', ctx => {
-    expect(ctx.stdout).to.contain('hello jeff')
+  .do(() => cmd.run(['Mike', 'asc']))
+  .it('runs Mike asc', ctx => {
+    expect(ctx.stdout).to.contain('Searching Mike github, sorting in asc order')
   })
 })
