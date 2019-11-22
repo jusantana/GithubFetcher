@@ -1,3 +1,4 @@
 {
-  "extends": "oclif"
+  "parser": "babel-eslint",
+  "extends": "oclif",
 }
