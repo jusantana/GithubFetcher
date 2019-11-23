@@ -1,5 +1,6 @@
 const {Command, flags} = require('@oclif/command')
-
+const axios = require('axios')
+const cli = require('cli-ux')
 class GithubFetcherCommand extends Command {
   static args = [{
     name: 'username',
@@ -20,6 +21,9 @@ class GithubFetcherCommand extends Command {
     const {args} = this.parse(GithubFetcherCommand)
     const username = args.username
     const sort = args.sort || 'asc'
+    const url = `https://api.github.com/users/${username}/repos`
+    const {data: repos} = await axios.get(url)
+    this.log(repos)
     this.log(`Searching ${username} github, sorting in ${sort} order`)
   }
 }
