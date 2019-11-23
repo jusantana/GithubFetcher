@@ -23,6 +23,10 @@ class GithubFetcherCommand extends Command {
     const sort = args.sort || 'asc'
     const url = `https://api.github.com/users/${username}/repos`
     const {data: repos} = await axios.get(url)
+    cli.table(repos, {
+      name,
+    },
+    stargazers_count)
     this.log(repos)
     this.log(`Searching ${username} github, sorting in ${sort} order`)
   }
