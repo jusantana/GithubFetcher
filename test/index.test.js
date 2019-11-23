@@ -8,8 +8,16 @@ const cmd = require('..')
 describe('githubFetcher', () => {
   test
   .stdout()
-  .do(() => cmd.run(['Mike', 'asc']))
-  .it('runs Mike asc', ctx => {
-    expect(ctx.stdout).to.contain('Searching Mike github, sorting in asc order')
+  .do(() => cmd.run(['julian', 'asc']))
+  .it('runs julian asc', ctx => {
+    expect(ctx.stdout).to.exist
   })
-})
+
+  test
+  .stdout()
+  .do(() => cmd.run(['julian', 'desc']))
+  .it('runs julian desc', ctx => {
+    expect(ctx.stdout).to.exist
+  })
+}
+)
