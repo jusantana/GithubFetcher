@@ -28,6 +28,17 @@ npm install
 ```
 If successful the command will install all dependacies.
 
+## Usage
+This program accepts two arguments, first the github username, and second the sorting order.
+`./bin/run [username] [asc||desc]`
+#### Example
+```
+./bin/run oclif asc
+```
+returns:
+
+   ![Screenshot from 2019-11-23 20-19-48](https://user-images.githubusercontent.com/31261222/69487836-cc792f80-0e2e-11ea-8f9d-dc228546eee1.png)
+
 ## Running the tests
 
 To run the tests use the command 
