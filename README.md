@@ -1,7 +1,7 @@
 githubFetcher
 =============
 
-Fetches Github repositories by username and sorts them by stargazers
+Fetches Github repositories by username and sorts them by stargazers.
 
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
 
@@ -11,7 +11,7 @@ Clone this repository into your local machine.
 
 ### Prerequisites
 
-Node and Npm are needed for this program to work. Npm comes with node and can be downloaded from https://nodejs.org/en/download/.
+Node and Npm are required for this program to work. Npm comes with node and can be downloaded from https://nodejs.org/en/download/.
 Alternatively, you can use the following commands to install Node.
 ```
 curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
@@ -21,15 +21,15 @@ node -v // To check installation was successful
 
 ## Installing
 
-First cd into your project directory.
-Then run the following command.
+First, cd into your project directory.
+Second, run the following command.
 ```
 npm install
 ```
-If successful the command will install all dependacies.
+If successful the command will install all dependencies.
 
 ## Usage
-This program accepts two arguments, first the github username, and second the sorting order.
+This program accepts two arguments, Github username, and sorting order.
 `./bin/run [username] [asc||desc]`
 #### Example
 ```
@@ -41,7 +41,7 @@ returns:
 
 ## Running the tests
 
-To run the tests use the command 
+To run the tests use command: 
 ```
 npm test
 ```
