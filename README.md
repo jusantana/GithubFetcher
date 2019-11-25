@@ -39,6 +39,11 @@ This program accepts two arguments, Github username, and sorting order.
 returns:
 
    ![Screenshot from 2019-11-23 20-19-48](https://user-images.githubusercontent.com/31261222/69487836-cc792f80-0e2e-11ea-8f9d-dc228546eee1.png)
+   
+#### Flags
+`-v or --version` Prints out version number.
+`-h or --help` Prints out help.
+`--verbose` Turns on verbose mode.
 
 ## Running the tests
 
@@ -55,6 +60,7 @@ Tests will fail if eslint finds errors.
 ## Built With
 
 * [Oclif](https://github.com/oclif/oclif) - CLI program framework
+* [Axios](https://github.com/axios/axios) - Promise based HTTP client
 
 
 ## Authors
