@@ -4,6 +4,7 @@ githubFetcher
 Fetches Github repositories by username and sorts them by stargazers.
 
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
+[![Build Status](https://travis-ci.org/jusantana/GithubFetcher.svg?branch=master)](https://travis-ci.org/jusantana/GithubFetcher)
 
 ## Getting Started
 
