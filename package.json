@@ -1,7 +1,7 @@
 {
   "name": "githubFetcher",
   "description": "Fetches Github repositories by username and sorts them by stargazers",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "author": "@jusantana",
   "bin": {
     "githubfetcher": "./bin/run"
