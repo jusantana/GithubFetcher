@@ -15,7 +15,7 @@ Clone this repository into your local machine.
 Node and Npm are required for this program to work. Npm comes with node and can be downloaded from https://nodejs.org/en/download/.
 Alternatively, you can use the following commands to install Node.
 ```
-curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 sudo apt install nodejs
 node -v // To check installation was successful
 ```
