@@ -1,4 +1,4 @@
-githubFetcher
+Github Fetcher
 =============
 
 Fetches Github repositories by username and sorts them by stargazers.
